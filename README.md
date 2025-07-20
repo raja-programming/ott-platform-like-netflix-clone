@@ -6,6 +6,13 @@ A responsive movie website UI with modern HTML, CSS, and Bootstrap.
 ---
 
 ## 🖼️ Screenshots
+## 🏠 Home Page
+
+![Home Page](Images/Readme/Home%20Page.jpg)
+
+## 💥 Hero Section
+
+![Hero Section](Images/Readme/Hero%20Section.jpg)
 
 ### 🟢 Sign In Page  
 ![Sign In](Images/Readme/Sign%20in%20Page.jpg)
