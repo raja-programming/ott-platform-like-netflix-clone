@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinema Pattarai</title>
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/png" href="Images/Hello23.png" sizes="32x32" />
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+<!-- ✅ Navbar -->
+<div class="bg-overlay">
+  <nav id="navbar" class="netflix-navbar d-flex justify-content-between align-items-center px-4 py-3 position-fixed w-100">
+    <div class="navbar-brand">Cinema Pattarai</div>
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-outline-warning px-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      <button class="btn btn-warning text-black px-3" data-bs-toggle="modal" data-bs-target="#registerModal">Join Now</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ✅ Hero Banner (adjusted padding to sit below navbar) -->
+<section class="hero-banner text-white d-flex flex-column justify-content-center align-items-center px-3"
+  style="padding-top: 100; min-height: 100vh; background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('Images/bg-movies.jpg') center/cover no-repeat;">
+
+  <div class="container text-center">
+
+    <!-- 🎬 Title -->
+    <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">
+      <span class="d-block">Streaming happiness, one</span>
+      <span class="d-block">movie at a time</span>
+    </h1>
+
+    <!-- 🌍 Subtext -->
+    <p class="lead mb-2 animate__animated animate__fadeInUp">
+      From timeless blockbusters – only on <strong>Cinema Pattarai</strong>.
+    </p>
+
+    <!-- 🎁 Offer Message -->
+    <p class="mb-4 animate__animated animate__fadeInUp">
+      Start watching for just ₹149/month. No ads. No commitments. Just pure joy.
+    </p>
+
+    <!-- 📧 Email Subscription Form -->
+    <form class="d-flex flex-column flex-sm-row justify-content-center gap-3 animate__animated animate__fadeInUp">
+      <input type="email" placeholder="Enter your email" class="form-control form-control-lg"
+        required style="max-width: 400px; border-radius: 10px;">
+      <button class="btn btn-danger btn-lg px-4 rounded-3">
+        Start Watching <span>&#9658;</span>
+      </button>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- ✅ Genre Filter & Search -->
+<section class="bg-black py-4">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
+      <select id="genreFilter" class="form-select w-auto">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="romance">Romance</option>
+      </select>
+      <input type="text" id="searchBox" class="form-control w-auto" placeholder="Search movies...">
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Trending Movies Section (Netflix Style with Number Overlay) -->
+<section class="bg-black py-5">
+  <div class="container">
+    <h3 class="text-white text-center mb-4">Hollywod Movies</h3>
+
+    <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie1.jpg" alt="Transformers" class="movie-img">
+              <div class="movie-title">Transformers</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie2.jpg" alt="Thunderbolts" class="movie-img">
+              <div class="movie-title">Thunderbolts</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie3.jpg" alt="Minecraft" class="movie-img">
+              <div class="movie-title">Minecraft</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie4.jpg" alt="Wicked" class="movie-img">
+              <div class="movie-title">Wicked</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie5.jpg" alt="Mickey 17" class="movie-img">
+              <div class="movie-title">Mickey 17</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie6.jpg" alt="Venom" class="movie-img">
+              <div class="movie-title">Venom</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie7.jpg" alt="Captain America" class="movie-img">
+              <div class="movie-title">Captain America</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie8.jpg" alt="F1: The Movie" class="movie-img">
+              <div class="movie-title">F1: The Movie</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie9.jpg" alt="Batman" class="movie-img">
+              <div class="movie-title">Batman</div>
+            </div>
+            <div class="movie-card text-white text-center position-relative">
+              <img src="Images/movie10.jpg" alt="The Nun" class="movie-img">
+              <div class="movie-title">The Nun</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#trendingCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#trendingCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Tamil Movies Carousel Section -->
+<section class="bg-black py-5">
+  <div class="container">
+    <h3 class="text-white text-center mb-4">Tamil Movies</h3>
+
+    <div id="tamilMovieCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- 🎬 Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="movie-card text-white text-center">
+              <img src="Images/leo.jpg" alt="Leo" class="movie-img">
+              <div class="movie-title">Leo</div>
+            </div>
+            <div class="movie-card text-white text-center">
+              <img src="Images/lovetoday.jpg" alt="Love Today" class="movie-img">
+              <div class="movie-title">Love Today</div>
+            </div>
+            <div class="movie-card text-white text-center">
+              <img src="Images/karnan.jpg" alt="Karnan" class="movie-img">
+              <div class="movie-title">Karnan</div>
+            </div>
+            <div class="movie-card text-white text-center">
+              <img src="Images/don.jpg" alt="Don" class="movie-img">
+              <div class="movie-title">Don</div>
+            </div>
+            <div class="movie-card text-white text-center">
+              <img src="Images/Imaika Nodigal.jpg" alt="Imaika Nodigal" class="movie-img">
+              <div class="movie-title">Imaika Nodigal</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🎬 Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="movie-card text-white text-center">
+              <img src="Images/Sulthan.jpg" alt="Sulthan" class="movie-img">
+              <div class="movie-title">Sulthan</div>
+            </div>
+            <div class="movie-card text-white text-center">
+              <img src="Images/Amara Kaviyam.jpg" alt="Amara Kaviyam" class="movie-img">
+              <div class="movie-title">Amara Kaviyam</div>
+            </div>
+            <!-- Add more movie-cards if needed -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#tamilMovieCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#tamilMovieCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="subscription-section py-5 text-white">
+  <div class="container">
+    <h3 class="text-center mb-5 text-warning fw-bold">Choose Your Plan</h3>
+
+    <div class="table-responsive">
+      <table class="table table-bordered text-center subscription-table">
+        <thead class="bg-warning text-dark">
+          <tr>
+            <th>Features</th>
+            <th>Basic<br><small>(₹199/mo)</small></th>
+            <th>Standard<br><small>(₹399/mo)</small></th>
+            <th>Premium<br><small>(₹3,999/yr)</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Video Quality</td>
+            <td>SD</td>
+            <td>HD</td>
+            <td>Ultra HD</td>
+          </tr>
+          <tr>
+            <td>Devices</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Ad-Free</td>
+            <td><i class="fas fa-times text-danger"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+          </tr>
+          <tr>
+            <td>Offline Download</td>
+            <td><i class="fas fa-times text-danger"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+          </tr>
+          <tr>
+            <td>TV Access</td>
+            <td><i class="fas fa-times text-danger"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+            <td><i class="fas fa-check text-success"></i></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button class="btn btn-outline-warning btn-sm">Subscribe</button></td>
+            <td><button class="btn btn-outline-warning btn-sm">Subscribe</button></td>
+            <td><button class="btn btn-warning text-dark fw-bold">Subscribe Now</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form action="home.html" method="get">
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-warning w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Register</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form action="register.html" method="get">
+            <div class="mb-3">
+              <label>Full Name</label>
+              <input type="text" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-warning w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ✅ Footer Section -->
+<footer class="bg-black text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row">
+
+      <!-- About Us -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h5 class="text-uppercase fw-bold mb-3 text-warning">Cinema Pattarai</h5>
+        <p class="small text-light">
+          Streaming the best of Tamil & world cinema. No ads. No nonsense. Just pure joy, anytime, anywhere.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3 text-warning">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none footer-link">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="text-white text-decoration-none footer-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3 text-warning">Contact</h6>
+        <p><i class="fas fa-envelope me-2 text-warning"></i> support@cinemapattarai.com</p>
+        <p><i class="fas fa-phone me-2 text-warning"></i> +91 8524863327</p>
+        <p><i class="fas fa-map-marker-alt me-2 text-warning"></i> Chennai, Tamil Nadu</p>
+      </div>
+
+      <!-- Social -->
+      <div class="col-md-3 col-lg-4 col-xl-2 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3 text-warning">Follow Us</h6>
+        <a href="#" class="text-white me-3 footer-icon"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="text-white me-3 footer-icon"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="text-white me-3 footer-icon"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="text-white me-3 footer-icon"><i class="fab fa-youtube fa-lg"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center py-3 border-top border-secondary mt-4 text-light">
+    &copy; 2025 <span class="text-warning">Cinema Pattarai</span>. All Rights Reserved.
+  </div>
+</footer>
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
