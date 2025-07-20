@@ -1,7 +1,7 @@
 # cinema-pattarai
 # 🎬 Cinema Pattarai
 
-A responsive movie website UI with modern HTML, CSS, and Bootstrap.
+Front End OTT PLATFORM  HTML, CSS, and Bootstrap.
 
 ---
 
