@@ -20,8 +20,10 @@ Front End OTT PLATFORM  HTML, CSS, and Bootstrap.
 ### 🎞️ Hollywood Section  
 ![Hollywood](Images/Readme/Hollywood%20Section.jpg)
 
+### 💳 Subscription Section  
+![Subscription](Images/Readme/Subscription%20Section.jpg)
+
+
 ### 📩 Contact Section  
 ![Contact](Images/Readme/Contact%20Secction.jpg)
 
-### 💳 Subscription Section  
-![Subscription](Images/Readme/Subscription%20Section.jpg)
