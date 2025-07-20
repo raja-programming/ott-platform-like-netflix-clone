@@ -1,8 +1,7 @@
 
-# 🎬 Cinema Pattarai
+# 🎬 Cinema Pattarai - OTT PLATFORM FRONT END DEVELOPMENT 
 
-Front End OTT PLATFORM  HTML, CSS, and Bootstrap.
-
+Html, Css, JavaScript and Bootstrap.
 
 ## 🏠 Home Page
 
