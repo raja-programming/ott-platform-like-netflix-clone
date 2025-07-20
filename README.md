@@ -1,11 +1,9 @@
-# cinema-pattarai
+
 # 🎬 Cinema Pattarai
 
 Front End OTT PLATFORM  HTML, CSS, and Bootstrap.
 
----
 
-## 🖼️ Screenshots
 ## 🏠 Home Page
 
 ![Home Page](Images/Readme/Home%20Page.jpg)
