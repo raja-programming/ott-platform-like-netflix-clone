@@ -1,5 +1,5 @@
 
-# 🎬 Cinema Pattarai - OTT PLATFORM FRONT END DEVELOPMENT 
+# 🎬 STREAMIX - OTT PLATFORM FRONT END DEVELOPMENT 
 
 Html, Css, JavaScript and Bootstrap.
 
